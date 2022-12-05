@@ -91,11 +91,13 @@ def populateDicts() -> tuple[dict, dict, int]:
       aoOperation.append(oOperation.copy())
   return aoStack, aoOperation, iStackCount
 
+def printStack(aoStack, iStackCount) -> None:
+  for i in range(1, iStackCount + 1):
+    print('Stack {}: {}'.format(i, aoStack[i]))
 
 def taskOne(aoStack, aoOperation, iStackCount) -> None:
   print('Original stacks:')
-  for i in range(1, iStackCount + 1):
-    print('Stack {}: {}'.format(i, aoStack[i]))
+  printStack(aoStack, iStackCount)
 
   # resolve movement
   for oOperation in aoOperation:
@@ -103,8 +105,7 @@ def taskOne(aoStack, aoOperation, iStackCount) -> None:
       aoStack[oOperation['to']].append(aoStack[oOperation['from']].pop())
 
   print("Movement resolved.")
-  for i in range(1, iStackCount + 1):
-    print('Stack {}: {}'.format(i, aoStack[i]))
+  printStack(aoStack, iStackCount)
 
   sTopOfStack = ''
   for i in range(1, iStackCount + 1):
@@ -156,8 +157,7 @@ unload the final supplies. After the rearrangement procedure completes, what cra
 
 def taskTwo(aoStack, aoOperation, iStackCount) -> None:
   print('Original stacks:')
-  for i in range(1, iStackCount + 1):
-    print('Stack {}: {}'.format(i, aoStack[i]))
+  printStack(aoStack, iStackCount)
 
   # resolve movement
   for oOperation in aoOperation:
@@ -166,8 +166,7 @@ def taskTwo(aoStack, aoOperation, iStackCount) -> None:
       aoStack[oOperation['from']].pop()
 
   print("Movement resolved.")
-  for i in range(1, iStackCount + 1):
-    print('Stack {}: {}'.format(i, aoStack[i]))
+  printStack(aoStack, iStackCount)
 
   sTopOfStack = ''
   for i in range(1, iStackCount + 1):
