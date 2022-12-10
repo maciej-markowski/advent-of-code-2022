@@ -264,10 +264,10 @@ def taskOne() -> None:
 
   with open('input', 'r') as fInputFile:
     while True:
-        sLine = fInputFile.readline()
-        if not sLine:
-          break
-        aoMovements.append([sLine.split()[0], int(sLine.split()[1])])
+      sLine = fInputFile.readline()
+      if not sLine:
+        break
+      aoMovements.append([sLine.split()[0], int(sLine.split()[1])])
 
   for aMove in aoMovements:
     for i in range(aMove[1]):
@@ -332,10 +332,10 @@ def taskTwo() -> None:
 
   with open('input', 'r') as fInputFile:
     while True:
-        sLine = fInputFile.readline()
-        if not sLine:
-          break
-        aoMovements.append([sLine.split()[0], int(sLine.split()[1])])
+      sLine = fInputFile.readline()
+      if not sLine:
+        break
+      aoMovements.append([sLine.split()[0], int(sLine.split()[1])])
 
   for aMove in aoMovements:
     for _ in range(aMove[1]):
