@@ -66,10 +66,6 @@ Figure out which monkeys to chase by counting how many items they inspect over 2
 What is the level of monkey business after 20 rounds of stuff-slinging simian shenanigans?
 """
 
-
-from tkinter import W
-
-
 def taskOne() -> None:
   oMonkeys = {}
   with open('input', 'r') as fInputFile:
@@ -129,7 +125,13 @@ def taskOne() -> None:
  
 
 """
-
+You're worried you might not ever get your items back. So worried, in fact, that your relief that a monkey's inspection
+didn't damage an item no longer causes your worry level to be divided by three.
+Unfortunately, that relief was all that was keeping your worry levels from reaching ridiculous levels. You'll need to
+find another way to keep your worry levels manageable.
+At this rate, you might be putting up with these monkeys for a very long time - possibly 10000 rounds!
+Worry levels are no longer divided by three after each item is inspected; you'll need to find another way to keep your
+worry levels manageable. Starting again from the initial state in your puzzle input, what is the level of monkey business after 10000 rounds?
 """
 
 def taskTwo() -> None:
